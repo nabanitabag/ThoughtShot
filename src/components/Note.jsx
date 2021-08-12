@@ -1,11 +1,11 @@
 import React from "react";
 
 function Note(props) {
-  function handleDelete(event) {
-    const note = event.target.value;
-    props.onDelete;
+  function handleDelete() {
+    props.onDelete(props.id);
   }
 
+  //- Callback from the Note component to trigger a delete function.
   return (
     <div className="note">
       <h1>{props.title}</h1>
