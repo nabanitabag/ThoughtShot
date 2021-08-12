@@ -1,4 +1,4 @@
-# NoteKeeper
+# Thoughshot
 Humans are special because we are the only animals who can think.
 
 However there is caveat. 
