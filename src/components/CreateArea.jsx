@@ -21,7 +21,10 @@ function CreateArea(props) {
   //- Pass the new note back to the App through props.
   function submitNote(event) {
     props.onAdd(note);
-
+    setNote({
+      title: "",
+      content: ""
+    });
     //to stop refreshing after every click
     //also retaining the title and content values
     event.preventDefault();
