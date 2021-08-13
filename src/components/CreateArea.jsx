@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import FilterDramaIcon from "@material-ui/icons/FilterDrama";
-import Fab from "@material-ui/core/Fab";
+import { Fab } from "@material-ui/core";
 import { Zoom } from "@material-ui/core";
 
 function CreateArea(props) {
+  const [isExpanded, setExpanded] = useState(false);
   //- Create a constant that keeps track of the title and content.
   const [note, setNote] = useState({
     title: "",
@@ -33,23 +34,30 @@ function CreateArea(props) {
     event.preventDefault();
   }
 
+  function expand(event) {
+    setExpanded(true);
+  }
+
   return (
     <div>
       <form classname="create-note">
-        <input
-          name="title"
-          onChange={handleChange}
-          value={note.title}
-          placeholder="Mood/Theme"
-        />
+        {isExpanded && (
+          <input
+            name="title"
+            onChange={handleChange}
+            value={note.title}
+            placeholder="Mood/Theme"
+          />
+        )}
         <textarea
           name="content"
+          onClick={expand}
           onChange={handleChange}
           value={note.content}
-          placeholder="Take a screenshot of your thought..."
-          rows="3"
+          placeholder="Take a thought screenshot..."
+          rows={isExpanded ? 3 : 1}
         />
-        <Zoom in={true}>
+        <Zoom in={isExpanded}>
           <Fab onClick={submitNote}>
             <FilterDramaIcon />+
           </Fab>

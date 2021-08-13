@@ -75,7 +75,7 @@ function App() {
             id={index}
             title={savednoteItem.title}
             content={savednoteItem.content}
-            // onDelete={deleteSavedNote}
+            onDelete={deleteSavedNote}
           />
         );
       })}
