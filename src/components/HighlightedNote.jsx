@@ -10,10 +10,9 @@ function HighlightedNote(props) {
     <div className="saved-note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
-      {/* <button> */}
-      {/* onClick={handleDelete}> */}
-      {/* <DeleteIcon /> */}
-      {/* </button> */}
+      <button onClick={handleDelete}>
+        <DeleteIcon />
+      </button>
     </div>
   );
 }
