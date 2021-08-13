@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background-color: #332c17;
+  background-color: #660469;
   margin: auto -16px;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -59,7 +59,7 @@ footer p {
   position: relative;
   float: right;
   margin-right: 10px;
-  color: #dd6d6d;
+  color: #660469;
   border: none;
   width: 36px;
   height: 36px;
@@ -71,7 +71,7 @@ form {
   position: relative;
   width: 480px;
   margin: 30px auto 20px auto;
-  background: #fff;
+  background: white;
   padding: 15px;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
@@ -88,9 +88,9 @@ form textarea {
 }
 form button {
   position: absolute;
-  right: 18px;
+  right: 1px;
   bottom: -18px;
-  background: #332c17;
+  background: #f5ba13;
   color: #fff;
   border: none;
   border-radius: 50%;

@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import FilterDramaIcon from "@material-ui/icons/FilterDrama";
+import Fab from "@material-ui/core/Fab";
+import { Zoom } from "@material-ui/core";
 
 function CreateArea(props) {
   //- Create a constant that keeps track of the title and content.
@@ -32,21 +35,25 @@ function CreateArea(props) {
 
   return (
     <div>
-      <form>
+      <form classname="create-note">
         <input
           name="title"
           onChange={handleChange}
           value={note.title}
-          placeholder="Title"
+          placeholder="Mood/Theme"
         />
         <textarea
           name="content"
           onChange={handleChange}
           value={note.content}
-          placeholder="Take a note..."
+          placeholder="Take a screenshot of your thought..."
           rows="3"
         />
-        <button onClick={submitNote}>Add</button>
+        <Zoom in={true}>
+          <Fab onClick={submitNote}>
+            <FilterDramaIcon />+
+          </Fab>
+        </Zoom>
       </form>
     </div>
   );
