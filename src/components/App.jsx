@@ -9,7 +9,7 @@ function App() {
   const [notes, setNotes] = useState([]);
   const [savedNotes, setSavedNotes] = useState([]);
 
-  //- Add new note to an array.
+  //- Add a new note to the array.
   function addNote(newNote) {
     setNotes((prevNotes) => {
       return [...prevNotes, newNote];
