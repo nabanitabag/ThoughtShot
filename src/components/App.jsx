@@ -37,7 +37,7 @@ function App() {
   }
 
   function saveNote(id) {
-    // Save a good note using its id.
+    // Save good note using its id.
     setSavedNotes((prevNotes) => {
       const newSavedNote = notes.find((x, idx) => idx === id);
       // console.log(newSavedNote);
